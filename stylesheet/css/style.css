@@ -134,6 +134,16 @@ a {
           flex: 0.8;
 }
 
+.main-image {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-image {
+    display: block;
+  }
+}
+
 body {
   width: 100%;
 }
@@ -204,9 +214,9 @@ img {
 
 .block__heading {
   margin: 60px auto;
-  font-size: 32px;
+  font-size: 28px;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
 }
 
 .container {
@@ -215,9 +225,26 @@ img {
   padding: 50px 20px;
 }
 
+.pc {
+  display: none;
+}
+
+.sp {
+  display: block;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 88%;
+}
+
 @media only screen and (min-width: 768px) {
   .container {
     padding: 60px 15%;
+  }
+  .pc {
+    display: block;
+  }
+  .sp {
+    display: none;
   }
 }
 
@@ -226,7 +253,7 @@ img {
 }
 
 .service__card {
-  width: 28%;
+  margin: 10px auto;
 }
 
 .service-container {
@@ -236,6 +263,25 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .service__card {
+    width: 28%;
+  }
+  .service-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .block__heading {
+    font-size: 32px;
+  }
 }
 
 .form p {
@@ -290,6 +336,7 @@ input {
 
 .material-symbols-outlined {
   position: absolute;
+  top: 21px;
   right: 12px;
   color: #ccc;
 }
@@ -297,9 +344,9 @@ input {
 .faq-block {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-bottom: 10px;
-  padding: 10px 50px 10px 15px;
-  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 22px 50px 22px 15px;
+  font-size: 16px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -309,6 +356,9 @@ input {
             box-sizing: border-box;
     padding: 30px 110px 30px 40px;
     font-size: 18px;
+  }
+  .material-symbols-outlined {
+    top: 30px;
   }
 }
 
@@ -341,5 +391,13 @@ input {
 .feature-text {
   font-size: 16px;
   line-height: 24px;
+}
+
+.line {
+  display: none;
+}
+
+select {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
